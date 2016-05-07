@@ -1,0 +1,153 @@
+\documentclass[12pt]{article}%
+\usepackage{amsfonts}
+\usepackage{fancyhdr}
+\usepackage{comment}
+\usepackage[letterpaper, top=2.5cm, bottom=2.5cm, left=2.2cm, right=2.2cm]%
+{geometry}
+\usepackage{times}
+\usepackage{amsmath}
+\usepackage{changepage}
+\usepackage{multirow}
+\usepackage{amssymb}
+\usepackage{graphicx}%
+\graphicspath{ {images/} }
+\usepackage{amsmath}
+\setcounter{MaxMatrixCols}{30}
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Z}{\mathbb{Z}}
+
+\newcommand*{\pd}[3][]{\ensuremath{\frac{\partial^{#1} #2}{\partial #3}}}
+
+\usepackage{enumerate}
+\usepackage{array}
+\newcolumntype{M}{>{$}c<{$}}
+
+
+\begin{document}
+
+\title{CS 440/ECE448 Homework 2}
+\author{Tanishq Dubey (tdubey3)}
+\date{\today}
+\maketitle
+\section*{Problem 1}
+    \begin{enumerate}[a)]
+            \item
+                $p(x,y)$: This expression is a literal, WFF, and an atom because it is a 2-ary predicate with terms as arguments.
+            \item
+                $h(x, y, z, y)$: This expression is a term because it is a function, which is a term, that constitutes of terms as its arguments.
+            \item
+                $\forall x\, \exists y\, p(x, y)$: This expression is a well-formed formula (WFF) it is an atom that properly introduces all variables.
+            \item
+                $\neg \neg alice$: This expression is ill-formed because you cannot negate a object constant.
+            \item
+                $\neg \neg p(alice)$: This expression is a literal since it is an atom - $p(alice)$ is a atom because it is a term within a predicate - because it is a number of negations applied to an atom.
+            \item
+                $p(f(x)) \implies q(x)$: This expression is a WFF because it is a series of predicate with terms as arguments which implies another predicate with terms as arguments and predicates with terms as arguments are atoms.
+    \end{enumerate}
+
+\section*{Problem 2}
+    \begin{enumerate}[a)]
+        \item
+            $\forall x\, man(x) \implies WillDie(x)$
+        \item
+            $\exists x\, [Lannister(x) \implies \exists y\,(debt(y) \land \, paid(x,y))]]$
+        \item
+            $(\exists x \, John(x) \land \exists y \, Mary(y))\land Likes(x, y) \land \, \exists z \, [person(z) \land \, \neg Is(x, z) \land \, Likes(y, z)]$
+        \item
+            ${\forall x \, [student(x) \implies \exists y \, (homework(y) \land \, completed(x, y))]} \, \land \,$ \newline
+            $ {\forall z \, [homework(z) \implies \exists w \, (student(w) \land \, completed(w, z))]}$
+    \end{enumerate}
+\break
+8
+\section*{Problem 3}
+    \begin{enumerate}[a)]
+        \item Either all students are CS majors, or some students are CS majors. This statement is true in our world.
+        \item All integers are odd and positive. This statement is not true in our world.
+        \item All men are people. This is true in our world.
+    \end{enumerate}
+
+\section*{Problem 4}
+    This expression is true. This can prove this by simply using simple test cases on the following expression:
+    \[\forall x \, ((\neg((x+1)^2=4) \, \land \, ((x^2 - 5)^2 = 16)) \implies (x^2 =1 \lor x=3))\]
+    To simplify this, we can say that $w=\forall x \, ((\neg((x+1)^2=4) \, \land \, ((x^2 - 5)^2 = 16))$ and that $z=(x^2 =1 \lor x=3))$ thus we can say that $w\implies z$. With this we can prove the various cases of this expression:
+    \begin{enumerate}
+        \item $x^2 \neq 1$ and $x \neq 3$: In this case the statement evaluates to true because $w$ will be false and so $z$ will be true. Thus the expression is true. 
+        \item $x^2 \neq 1$ and $x = 3$: In this case the statement evaluates to true because $w$ will be true and so $z$ will be true. Thus the expression is true.
+        \item $x^2 = 1$ and $x \neq 3$: In this case the statement evaluates to true because $w$ will be false and so $z$ will be true. Thus the expression is true.
+    \end{enumerate}
+    Due to these cases, it can be said that the expression is true.
+
+\section*{Problem 5}
+    In our world, you will get both her autograph and a selfie. This is possible because we essentially have the statement:
+    \[ Given\, Autograph \implies Will\, be\, Given\, Selfie \]
+    
+    With this implication we can analyze a series of scenarios. If the antecedent of the implication is false, the expression is true no matter the outcome of the consequent this can be proven through material implication which states that for $p$ and $q$, $p \implies q$ is equivalent to $\neg p \land q$. This clearly shows that if the antecedent is false, the statement is true. Because of this rule, Jennifer Aniston (a superior actress) will not giver her autograph, but will take a selfie with us. Thus in our world, we will not get a selfie because these statements contradict each other. If we look at the other case in which the antecedent is true, we can see that if we use modus ponens, which states that if $p$, the antecedent holds, then $p \implies q$. With this rule we can see that if Jennifer Aniston gives us a autograph, it is implied that she will also take a selfie with us.
+
+\section*{Problem 6}
+\begin{enumerate}[a.]
+    \item \{$x = y$, $y = f(a,a)$, $z = y$\} \\
+    $p(f(a,a), f(a,a), f(a,a))$
+    \item This pair is not unifiable because once simplified down, one would be trying to unify $g(y,y)$ and $g(a,b)$. which is not possible because $y$ cannot simultaneously equal both $a$ and $b$.
+    \item \{$x = a$, $y = f(x, u)$, $u = g(z,b)$\}\\
+    $p(a, f(a,g(z,b)), g(z,b))$
+    \item \{$x = g(a,y)$, $y = a$, $z = g(y, g(y,a))$, $u = b$\}\\
+    $p(g(a,a), f(g(a,g(a,a)), g(a,g(a,a))), f(b,a))$
+\end{enumerate}
+
+\section*{Problem 7}
+    \begin{enumerate}[a)]
+        \item Initial State:\newline
+            Disk(x)\newline
+            Disk(y)\newline
+            Disk(z)\newline
+            Peg(a)\newline
+            Peg(b)\newline
+            Peg(c)\newline
+            Table(t)
+            Bigger(x,y)\newline
+            Bigger(y,z)\newline
+            Supports(x,y)\newline
+            Supports(y,z)\newline
+            Supports(t,x)
+            On(x,a)\newline
+            On(y,a)\newline
+            On(z,a)\newline
+            Clear(z)\newline
+            Empty(b)\newline
+            Empty(c)\newline
+        \item
+            3 STRIPS like operators will be needed to capture the dynamics of the world. These operators are "Disk to Disk", "Disk to Table", "Table to Disk", where it is on the table and is placed on a disk, and "Table to Table", where it is on the table and it is being moved to another peg where it is still on the table.
+        \item
+            Disk\_To\_Disk(x,y)\newline
+            PC: Clear(x), Clear(y), On(x,z), Disk(x), Disk(y), 
+            Disk(z), Diff(x, y), Diff(y,z), Bigger(y,x)
+            \newline
+            \newline
+            Effects: $\neg$On(x,z), $\neg$Clear(y), On(x,y), Clear(z)
+    \end{enumerate}
+\end{document}
