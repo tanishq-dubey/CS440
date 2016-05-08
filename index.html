@@ -1,33 +1,36 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
+
   <head>
-    <meta charset="utf-8">
+    <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>CS440 by tanishq-dubey</title>
+    <meta name="description" content="CS440 : Written Assignments for CS440 - Artificial Intelligence at UIUC">
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/github-light.css">
-    <meta name="viewport" content="width=device-width">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>CS440</title>
   </head>
+
   <body>
-    <div class="wrapper">
-      <header>
-        <h1>CS440</h1>
-        <p>Written Assignments for CS440 - Artificial Intelligence at UIUC</p>
 
-        <p class="view"><a href="https://github.com/tanishq-dubey/CS440">View the Project on GitHub <small>tanishq-dubey/CS440</small></a></p>
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/tanishq-dubey/CS440">View on GitHub</a>
 
+          <h1 id="project_title">CS440</h1>
+          <h2 id="project_tagline">Written Assignments for CS440 - Artificial Intelligence at UIUC</h2>
 
-        <ul>
-          <li><a href="https://github.com/tanishq-dubey/CS440/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/tanishq-dubey/CS440/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/tanishq-dubey/CS440">View On <strong>GitHub</strong></a></li>
-        </ul>
-      </header>
-      <section>
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/tanishq-dubey/CS440/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/tanishq-dubey/CS440/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
         <h1>
 <a id="cs440" class="anchor" href="#cs440" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>CS440</h1>
 
@@ -48,13 +51,316 @@
 </ul>
 
 <p>Raw LaTeX can be found on the <a href="https://github.com/tanishq-dubey/CS440">repo</a>.</p>
+
+<h1>
+<a id="a-study-guide-for-the-final" class="anchor" href="#a-study-guide-for-the-final" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>A Study Guide for the Final:</h1>
+
+<h1>
+<a id="probablity" class="anchor" href="#probablity" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Probablity</h1>
+
+<h2>
+<a id="frequentist-vs-bayesian-statistics" class="anchor" href="#frequentist-vs-bayesian-statistics" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Frequentist VS Bayesian Statistics</h2>
+
+<p><strong>Frequentist:</strong> Directly analyzing sample to reach probabilistic conclusion</p>
+
+<ul>
+<li>World is imprecise</li>
+<li>
+<strong>Fuzzy Logic</strong> measures accuracy based on <em>degrees of seperation</em> from the truth instead of binary true or false</li>
+</ul>
+
+<p><strong>Bayesian Statistics:</strong> Using Bayes theorem to reach probabilistic conclusions</p>
+
+<ul>
+<li>True state of the world is represented with "degrees of belief"</li>
+<li>Evidence can be objective or subjective</li>
+<li>Evidence can prove/disprove different distributions</li>
+<li>Bayes Theorem to update probablity</li>
+</ul>
+
+<h2>
+<a id="random-variable-distribution-joint" class="anchor" href="#random-variable-distribution-joint" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Random Variable, Distribution, Joint</h2>
+
+<h1>
+<a id="bayesian-network" class="anchor" href="#bayesian-network" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Bayesian Network</h1>
+
+<h2>
+<a id="bn-graph-bn-cpts" class="anchor" href="#bn-graph-bn-cpts" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>BN graph, BN CPTs</h2>
+
+<p><strong>Bayesian Net Graph</strong>: A Connected acyclic graph that models the condidtional relationships between a system of random variables. If a system violates a bayesian network's conditional independence assumptions, then it cannot be modeled accurately.</p>
+
+<ul>
+<li>Conditional independence is shown in a bayes net with <em>Lack of an arc</em>
+</li>
+<li><strong><em>Nodes are random variables</em></strong></li>
+<li><strong><em>Edges are directed influence (probability)</em></strong></li>
+</ul>
+
+<p><strong>Bayesian Net Conditional Proablity Table:</strong> Bayesian Networks simplify the conditional relationships of a given situation relative to the full joint conditional probablity tables. This drastically reduces the quantity of numbers that must be stored to accurately represent a given system. In Bayes net graphs, tables only need be stored for every node.</p>
+
+<ul>
+<li><strong><em>A table for each node representing the conditional probablities</em></strong></li>
+</ul>
+
+<p><strong>Conditional independence in Bayesian Networks:</strong> Represented in a bayesian netowrks by a <em>lack of an arc</em></p>
+
+<p><strong>Constructing Bayesian Networks</strong></p>
+
+<ul>
+<li>From given knowledge of model, use arcs to connection variables</li>
+<li>Go <em>from causes to symptoms</em> <strong><em>Ex. Smoking to lung cancer</em></strong>
+</li>
+</ul>
+
+<p><strong>Inferences with Bayesian Nets</strong></p>
+
+<ul>
+<li>Using known evidence, traverse the given bayesian network, paying attention to probablity.</li>
+<li>Inference is using the probablity of individual arcs to find the overall probablity of a atomic event.</li>
+</ul>
+
+<p><strong>Non Poly Tree</strong> Bayesian networks with undirected cycles <em>There Are never directed cycles in a bayesian network</em></p>
+
+<p><strong>Polytree:</strong> Bayesian networks with at most one undirected path between any two nodes</p>
+
+<p><strong>Inferencing on a NonPolyTree</strong></p>
+
+<ul>
+<li>Joining trees, using a junction tree algorithm
+
+<ul>
+<li>Simplify a given tree by identifying clusters of nodes and forming super nodes</li>
+</ul>
+</li>
+<li>Restore polytree property by modifying tree somehow</li>
+<li><strong><em>Use a montecarlo sampling algorithm</em></strong></li>
+</ul>
+
+<p><strong>Rejection Sampling</strong></p>
+
+<ul>
+<li>A montecarlo method that involves producing samples and processing through a bayesian net rejecting or accepting them depending on their vale
+
+<ul>
+<li>Start with all RV's unknown</li>
+<li>Choose a topological ordering</li>
+<li>Get random numbers to assign values</li>
+<li>Generate samples and reject anythig that's not satisfied
+
+<ul>
+<li>Calculate probablities by counting</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+<p><strong>Likelihood weighting</strong></p>
+
+<ul>
+<li>Fix evidence variables, sample only nonevidence variables and wieght each sample by the likelihood it adhears to evidence
+
+<ul>
+<li>Assign a topological ordering</li>
+<li>Generate a sample randomly</li>
+<li>Reject nothing, weight each sample by its total likelihood</li>
+</ul>
+</li>
+</ul>
+
+<p><strong>Gibbs Sampling</strong></p>
+
+<ul>
+<li><strong><em>One version of a markov chain monte carlo algorithm</em></strong></li>
+<li>Fix evidence variables to their values</li>
+<li>Initalize all other values randomly</li>
+<li>Iterate over all nodes many times</li>
+<li>During each iteration resample the non-evidence variables using only the markov blaket for conditioning
+
+<ul>
+<li>Markov Blanket: Variable is conditionally independent of all other nodes given its parents, children and siblings</li>
+</ul>
+</li>
+<li>Each iteration should adjuct the probablities slightly</li>
+</ul>
+
+<p><em>Naive Bayes</em>
+            - A supervised learning algorithm based on applying Bayes' theorem with the naive assumption of independence between every pair of features. Only the most relevant relation is considered.
+            - Ususally, root is the query and leaves are the evidence nodes
+            - Symptoms (evidence nodes) are conditionally independent of each other given the disease
+            - Stringent assumptions, take the max relationship and use that as the likely relationsship
+            - lets you infer the most likely disease easily</p>
+
+<h1>
+<a id="machine-learning" class="anchor" href="#machine-learning" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Machine Learning</h1>
+
+<h2>
+<a id="example-and-hypothesis-space" class="anchor" href="#example-and-hypothesis-space" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Example and Hypothesis Space</h2>
+
+<p><strong>Example Space</strong>: All possible inputs</p>
+
+<p><strong>Hypothesis Space:</strong> All possible outputs (Concept Space)</p>
+
+<h2>
+<a id="decision-trees" class="anchor" href="#decision-trees" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Decision Trees</h2>
+
+<p><strong>Decision Tree</strong> A problem solving tool that uses a tree-like graph to model all possible decisions and the resulting consequences of those decisions.</p>
+
+<p><strong>Construction</strong> Given a set of samples:</p>
+
+<ul>
+<li>If a node is homogeneous or close to homogeneous: Stop</li>
+<li>Else: Use the most useful test to split
+
+<ul>
+<li>Measure current entropy</li>
+<li>Measure entropy after eaech possible split</li>
+<li>Split on attribute that yeilds the lowest entropy</li>
+<li><strong><em>Minimize Entropy, Maximize information gain</em></strong></li>
+</ul>
+</li>
+<li>Recur on children
+
+<ul>
+<li>The algorithm will always halt</li>
+<li>If attributes are continuous, discrete into ranges</li>
+</ul>
+</li>
+<li>Simply:
+
+<ul>
+<li>Test: Get to a node, if good enough: STOP, else split</li>
+<li>Split: Choose "most useful" test to split on</li>
+<li>Feature: Recur on children</li>
+</ul>
+</li>
+</ul>
+
+<h2>
+<a id="entropy-pruing-overfitting-and-bias-variance-tradeoff" class="anchor" href="#entropy-pruing-overfitting-and-bias-variance-tradeoff" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Entropy, Pruing, Overfitting, and Bias Variance Tradeoff</h2>
+
+<p><strong>Entropy</strong> Measure of disorder, used to masure information gain from a split</p>
+
+<ul>
+<li>H(s) = Sum(v){-P(v)log2(P(v))}</li>
+<li>Split when information is greatest (<strong><em>Smallest Entropy</em></strong>)</li>
+</ul>
+
+<p><strong>Pruning</strong> A method used to reduce overfitting by reducing the size of a given decision tree, making it more general and thereby a better representation of the general problem. The last few splits on a decision tree often provide little information</p>
+
+<ul>
+<li>Alternatives to pruning
+
+<ul>
+<li>Restrict the expressiveness of H</li>
+<li>Limit the number of nodes</li>
+<li>Limit the height of the tree</li>
+<li>Limit the minimum number of examples required for a split </li>
+</ul>
+</li>
+</ul>
+
+<p><strong>Overfitting:</strong> when a machine learning algorithm finds patterns that are only present in the training data set and are not representative of reality. This causes good performance on training data, but poor performance on testing data</p>
+
+<ul>
+<li>Need to stop training at a certain point with a high learning rate (relative) to avoid overfitting</li>
+<li>Specifically in decision trees:
+
+<ul>
+<li>Split to nearly perfect data (homogeneous)</li>
+<li>Few examples are at leaves</li>
+<li>Low confidence in lower split choices</li>
+<li>Reduced by limited the depth, set of tests, and minimum number of examples used to select a split</li>
+</ul>
+</li>
+<li>Can overfit and Prune as well to correct local minima</li>
+</ul>
+
+<p><strong>Bias Variance Tradeoff:</strong> Given a limited training set, a decision tree model can either suffer from bias toward the training data due to overfitting or it can suffer from somewhat larger variance due to the more general nature of the resulting model.</p>
+
+<h2>
+<a id="bagging-and-cross-validation-variance-reduction" class="anchor" href="#bagging-and-cross-validation-variance-reduction" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Bagging and Cross Validation (Variance Reduction)</h2>
+
+<p><strong>Cross Validation:</strong> Using a separate set of data for training and verifying a machine learning model</p>
+
+<ul>
+<li>Can combine results (averaging, etc)</li>
+</ul>
+
+<p><strong>Bagging:</strong> Split all of the data into <em>N</em> bags. Use <em>N-1</em> bags for training and 1 bag for testing. Iterate through all the combinations, average all models. Doing this drastically reduces the impact of overfitting.</p>
+
+<ul>
+<li>Grow and prune decision tree with each new addition</li>
+<li>Split into <em>n</em> bags using <em>n-1</em> for training and 1 for testing.</li>
+<li>Iterate and average</li>
+</ul>
+
+<h1>
+<a id="learning-theory" class="anchor" href="#learning-theory" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Learning Theory</h1>
+
+<h2>
+<a id="simple-versus-agnostic-learning" class="anchor" href="#simple-versus-agnostic-learning" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Simple Versus Agnostic Learning</h2>
+
+<p><strong>Simple Learning:</strong> Rote learning. Learning just to deal with the scenarios that are presented in training data. </p>
+
+<ul>
+<li>Finite Hypothesis Space
+
+<ul>
+<li>
+<em>h</em> is a element of <em>H</em>
+</li>
+</ul>
+</li>
+<li>Find any <em>h</em> with zero empirical error</li>
+</ul>
+
+<p><strong>Agnostic Learning:</strong> Learning in a general form so that a given model can properly classify examples that exist outside of the training data space. </p>
+
+<ul>
+<li>Infinite Hypothesis Space</li>
+<li>Find an <em>h</em> with a low empirical error</li>
+</ul>
+
+<h2>
+<a id="finite-and-infite-hypothesis-space" class="anchor" href="#finite-and-infite-hypothesis-space" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Finite and Infite Hypothesis Space</h2>
+
+<p><strong>Finite Hypothesis Space:</strong> A bounded number of possible inputs and outputs</p>
+
+<p><strong>Infinite Hypothesis Space:</strong> A unbounded number of inputs and outputs. Agnostic learning must be used in order to have a tractable model</p>
+
+<h2>
+<a id="computational-and-statistical-learning-bounds" class="anchor" href="#computational-and-statistical-learning-bounds" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Computational and Statistical Learning Bounds</h2>
+
+<p><strong>Computational Learning Theory (CoLT):</strong> Determines the size of the required learning set by choosing <em>E</em> (acceptable error from ideal solutions), <em>D</em> (probably that the hypothesis is wrong) and <em>H</em> (the size of the hypothesis space).</p>
+
+<ul>
+<li>Determine size of the required learning set based off true error, delta, and <em>H</em>
+</li>
+</ul>
+
+<p><strong>Statistical Learning Theory:</strong> given <em>D</em>, <em>H</em>, and <em>N</em> (size of the training set), determine the bound for the true error (<em>E</em>).</p>
+
+<ul>
+<li>Given input values for theory we can determine bound of true error (Best you can do based off your data and size)</li>
+</ul>
+
+<h2>
+<a id="weak-law-of-large-numbers-chernoff-bounds" class="anchor" href="#weak-law-of-large-numbers-chernoff-bounds" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Weak Law of Large Numbers, Chernoff Bounds</h2>
+
+<p>**</p>
       </section>
-      <footer>
-        <p>This project is maintained by <a href="https://github.com/tanishq-dubey">tanishq-dubey</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">CS440 maintained by <a href="https://github.com/tanishq-dubey">tanishq-dubey</a></p>
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
       </footer>
     </div>
-    <script src="javascripts/scale.fix.js"></script>
+
     
+
   </body>
 </html>
