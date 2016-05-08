@@ -337,6 +337,8 @@
 
 <p><strong>Shattering:</strong> A classification model, <em>H</em>, is said to shatter a set of points, <em>N</em>, if and only if <em>H</em> can correctly label all of <em>N</em> for every combination of possible labels.</p>
 
+<p><strong>Cardinality:</strong> Number of elements in a set</p>
+
 <h3>
 <a id="some-examples" class="anchor" href="#some-examples" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Some Examples:</h3>
 
@@ -347,6 +349,163 @@
 <p><img src="http://i.imgur.com/bSOTj3m.png" alt="alt text" title="Example 3"></p>
 
 <p><img src="http://i.imgur.com/xeTeUoN.png" alt="alt text" title="Example 4"></p>
+
+<h2>
+<a id="probably-approximately-correct-paclearnable" class="anchor" href="#probably-approximately-correct-paclearnable" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Probably Approximately Correct (PAC)Learnable</h2>
+
+<p><strong>PAC Learning:</strong> A Method of machine learning that seeks to produce a hypothesis that with a high probability understands a target concept</p>
+
+<ul>
+<li>Concept class is PAC learnable if there exists an algorithm whose running time grows no faster than polynomially in natural complexity</li>
+</ul>
+
+<h1>
+<a id="perceptrons" class="anchor" href="#perceptrons" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Perceptrons</h1>
+
+<h2>
+<a id="problem-a-single-perceptron-cannot-learn-xor" class="anchor" href="#problem-a-single-perceptron-cannot-learn-xor" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Problem: A Single Perceptron cannot learn XOR</h2>
+
+<h2>
+<a id="solution-artificial-neural-networks-logistic-regressions-and-support-vector-machines" class="anchor" href="#solution-artificial-neural-networks-logistic-regressions-and-support-vector-machines" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Solution: Artificial Neural Networks, Logistic Regressions, and Support Vector Machines</h2>
+
+<p><strong>Artificial Neural Network:</strong> Machine learning model that was inspired by biological neural networks. It takes in a set of inputs and returns an output. </p>
+
+<ul>
+<li>Can represent any boolean function with one input layer</li>
+<li>Purposefully using too few hidden nodes can be used to avoid overfitting</li>
+</ul>
+
+<p><strong>Logistic Regression:</strong> Essentially a simpler form of a artificial neural network that only uses one layer of linearly weighted inputs that are then passed through a sigmoid function</p>
+
+<h2>
+<a id="delta-learning-rule" class="anchor" href="#delta-learning-rule" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Delta Learning Rule</h2>
+
+<ul>
+<li>Cycle through each point one at a time</li>
+<li>Only alter weights if perceptron makes a mistake</li>
+<li>If the points are linearly separable, the algorithm will always converge and will always find a separator</li>
+<li>If they are not linearly separable, the algorithm will not converge</li>
+<li>Can accumulate <em>deltaW</em> changes for each sample prior to making a change. This results in a semi-gradient descent like behavior. 
+
+<ul>
+<li>
+<strong>Epoch</strong> training does not maximize accuracy</li>
+</ul>
+</li>
+</ul>
+
+<h2>
+<a id="gradient-descent-stochastic-gradient-descent" class="anchor" href="#gradient-descent-stochastic-gradient-descent" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Gradient Descent, Stochastic Gradient Descent</h2>
+
+<p><strong>Gradient Descent</strong> A optimization algorithm that allows you to find local extrema. Each step is proportional to the gradient</p>
+
+<ul>
+<li>
+<em>Gradient</em> is the direction of max increase (or max decrease)</li>
+</ul>
+
+<p>** Stochastic Gradient Descent** A form of gradient descent that looks at individual samples during each iteration instead of considering the whole set</p>
+
+<h2>
+<a id="back-propagation" class="anchor" href="#back-propagation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Back Propagation</h2>
+
+<p><strong>Back Propagation</strong> Algorithm for updating ANN weights and biases based on error</p>
+
+<h2>
+<a id="margin" class="anchor" href="#margin" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Margin</h2>
+
+<p><strong>Margin</strong> The distance from a single data point to a decision boundary</p>
+
+<h2>
+<a id="syntactic-versus-semantic-convergence" class="anchor" href="#syntactic-versus-semantic-convergence" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Syntactic versus Semantic Convergence</h2>
+
+<p><strong>Syntactic Convergene</strong> When the values being considered converge. In the case of an ANN, this occurs when the weight and bias values converge</p>
+
+<p><strong>Semantic Convergence</strong> When a given ML model converges to a state such that it accurately classifies new samples</p>
+
+<h1>
+<a id="features" class="anchor" href="#features" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Features</h1>
+
+<h2>
+<a id="bag-of-words" class="anchor" href="#bag-of-words" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Bag of Words</h2>
+
+<p><strong>Bag of Words</strong> Representation of data commonly used in natural language processing that condenses a piece of data such as a sentence into a bag (multisite) of its fundamental components (words)</p>
+
+<ul>
+<li>The distance components and their multiplicities are stored.</li>
+<li>
+<strong>Issues</strong>
+
+<ul>
+<li>Does not work for phrases that use the same words rearranged</li>
+<li>Count of words is not very meaningful</li>
+<li>Longer documents have higher counts</li>
+<li>Similar documents can look very different based on word choice</li>
+</ul>
+</li>
+<li>
+<strong>Solutions</strong>
+
+<ul>
+<li>Don't drop punctuation</li>
+<li>Use TF-IDF</li>
+<li>Convert everything to lowercase</li>
+<li>Stop Words
+
+<ul>
+<li>Words that are too common to be discriminative, so should be removed</li>
+</ul>
+</li>
+<li>Stemming
+
+<ul>
+<li>Combine variants of a word</li>
+</ul>
+</li>
+<li>Synonym Pairing</li>
+<li>Named Entity resolution</li>
+<li>Include parts of speech </li>
+</ul>
+</li>
+</ul>
+
+<h2>
+<a id="tf-idf" class="anchor" href="#tf-idf" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>TF-IDF</h2>
+
+<p><strong>Term Frequency (TF) and Inverse Document Frequency(IDF)</strong> A numerical statistic that reflects the importance of a word to a document that is itself part of a larger corpus. The value increases proportionally to the number of times a word appears in a document but is offset by the frequency of the word in the entire corpus</p>
+
+<ul>
+<li>TF -&gt; Normalize the count, measure proportion</li>
+<li>IDF -&gt; Use words as features</li>
+</ul>
+
+<p><em>Score = TF * IDF</em></p>
+
+<p><em>TF(t,d) = N(t,d)/T(d)</em></p>
+
+<p><em>IDF = ln(Total number of documents/ Number of Documents with t in it)</em></p>
+
+<h2>
+<a id="bag-of-codewords" class="anchor" href="#bag-of-codewords" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Bag of Codewords</h2>
+
+<p>Multistep of clusters, sequences of normalized pixels usually that are unique to certain types of images. </p>
+
+<h1>
+<a id="unsupervised-learning" class="anchor" href="#unsupervised-learning" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Unsupervised Learning</h1>
+
+<h2>
+<a id="hierarchical-clustering-k-means" class="anchor" href="#hierarchical-clustering-k-means" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Hierarchical Clustering, K-Means</h2>
+
+<p><strong>Hierarchical Clustering</strong> Method of cluster analysis that builds a hierarchy of clusters, works either "bottoms up" or "top down"</p>
+
+<ul>
+<li>Closest Elements</li>
+<li>Farthest Elements </li>
+<li>Median Elements</li>
+<li>Centroid</li>
+</ul>
+
+<p><strong>K-Mean</strong> Set of algorithms that partitions <em>n</em> observations into <em>k</em> clusters. The mean of every element of a given cluster is closest to the model of a given cluster.</p>
       </section>
       <footer>
         <p>This project is maintained by <a href="https://github.com/tanishq-dubey">tanishq-dubey</a></p>
