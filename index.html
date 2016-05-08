@@ -34,7 +34,7 @@
 <h2>
 <a id="frequentist-vs-bayesian-statistics" class="anchor" href="#frequentist-vs-bayesian-statistics" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Frequentist VS Bayesian Statistics</h2>
 
-<p><strong>Frequentist:</strong> Directly analyzing sample to reach probabilistic conclusion</p>
+<p><strong>Frequentist:</strong> Directly analyzing sample to reach probabilistic conclusion. Draws conclusions from sample data by analyzing the frequency or proportion of the data.</p>
 
 <ul>
 <li>World is imprecise</li>
@@ -42,17 +42,59 @@
 <strong>Fuzzy Logic</strong> measures accuracy based on <em>degrees of seperation</em> from the truth instead of binary true or false</li>
 </ul>
 
-<p><strong>Bayesian Statistics:</strong> Using Bayes theorem to reach probabilistic conclusions</p>
+<p><strong>Bayesian Statistics:</strong> Using Bayes theorem to reach probabilistic conclusions and update the probability of a hypothesis as new information is gained.</p>
 
 <ul>
 <li>True state of the world is represented with "degrees of belief"</li>
 <li>Evidence can be objective or subjective</li>
 <li>Evidence can prove/disprove different distributions</li>
-<li>Bayes Theorem to update probablity</li>
+<li>Bayes Theorem to update probability</li>
 </ul>
 
 <h2>
-<a id="random-variable-distribution-joint" class="anchor" href="#random-variable-distribution-joint" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Random Variable, Distribution, Joint</h2>
+<a id="random-variable-distribution-and-joints" class="anchor" href="#random-variable-distribution-and-joints" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Random Variable, Distribution, and Joints</h2>
+
+<p><strong>Random Variable</strong> A variable whose value is a numerical outcome of a random phenomenon. Can be discrete or continuous. </p>
+
+<ul>
+<li>Discrete: Boolean, multi-valued, lots of possibilites, but always countable.</li>
+<li>Continuous: Infinite possibilities for values, within a interval. </li>
+</ul>
+
+<p><strong>Probability Distribution</strong> A function of a discrete variable whose integral or summation over any interval is the probability that the random variable by it will like within that interval.</p>
+
+<p><strong>Joint Probability Distribution (Full Joint)</strong> A function of multiple discrete variable whose integral or summation over any interval is the probability that the random variable specified by it will like within that area.</p>
+
+<h2>
+<a id="events" class="anchor" href="#events" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Events</h2>
+
+<p><strong>Types:</strong> Atomic events, exclusive and exhaustive (possible end results of logic)</p>
+
+<ul>
+<li>Complex events are often a collection of atomic events</li>
+</ul>
+
+<p><strong>Underlying Population</strong> All possible sequences of events</p>
+
+<p><strong>Sample</strong> A few observed sequences of events</p>
+
+<h2>
+<a id="distributions" class="anchor" href="#distributions" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Distributions</h2>
+
+<p>Sum over the distribution must be 1 and every probability is a value greater than 0.</p>
+
+<ul>
+<li><em>P(A∨B) = P(A) + P(B) - P(A∧B)</em></li>
+<li><em>P(A∧B) = P(A|B)P(B)</em></li>
+<li><em>P(A∧B) = P(A,B)</em></li>
+</ul>
+
+<p>Conditionally independent if <em>P(A|B) = P(A)</em></p>
+
+<h2>
+<a id="bayes-theorem" class="anchor" href="#bayes-theorem" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Bayes Theorem</h2>
+
+<p><em>P(A|B) = (P(B|A)P(A))/P(B)</em></p>
 
 <h1>
 <a id="bayesian-network" class="anchor" href="#bayesian-network" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Bayesian Network</h1>
@@ -60,7 +102,7 @@
 <h2>
 <a id="bn-graph-bn-cpts" class="anchor" href="#bn-graph-bn-cpts" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>BN graph, BN CPTs</h2>
 
-<p><strong>Bayesian Net Graph</strong>: A Connected acyclic graph that models the condidtional relationships between a system of random variables. If a system violates a bayesian network's conditional independence assumptions, then it cannot be modeled accurately.</p>
+<p><strong>Bayesian Net Graph</strong>: A Connected acyclic graph that models the conditional relationships between a system of random variables. If a system violates a bayesian network's conditional independence assumptions, then it cannot be modeled accurately.</p>
 
 <ul>
 <li>Conditional independence is shown in a bayes net with <em>Lack of an arc</em>
@@ -69,13 +111,13 @@
 <li><strong><em>Edges are directed influence (probability)</em></strong></li>
 </ul>
 
-<p><strong>Bayesian Net Conditional Proablity Table:</strong> Bayesian Networks simplify the conditional relationships of a given situation relative to the full joint conditional probablity tables. This drastically reduces the quantity of numbers that must be stored to accurately represent a given system. In Bayes net graphs, tables only need be stored for every node.</p>
+<p><strong>Bayesian Net Conditional Probability Table:</strong> Bayesian Networks simplify the conditional relationships of a given situation relative to the full joint conditional probability tables. This drastically reduces the quantity of numbers that must be stored to accurately represent a given system. In Bayes net graphs, tables only need be stored for every node.</p>
 
 <ul>
 <li><strong><em>A table for each node representing the conditional probablities</em></strong></li>
 </ul>
 
-<p><strong>Conditional independence in Bayesian Networks:</strong> Represented in a bayesian netowrks by a <em>lack of an arc</em></p>
+<p><strong>Conditional independence in Bayesian Networks:</strong> Represented in a bayesian networks by a <em>lack of an arc</em></p>
 
 <p><strong>Constructing Bayesian Networks</strong></p>
 
@@ -88,8 +130,8 @@
 <p><strong>Inferences with Bayesian Nets</strong></p>
 
 <ul>
-<li>Using known evidence, traverse the given bayesian network, paying attention to probablity.</li>
-<li>Inference is using the probablity of individual arcs to find the overall probablity of a atomic event.</li>
+<li>Using known evidence, traverse the given bayesian network, paying attention to probability.</li>
+<li>Inference is using the probability of individual arcs to find the overall probability of a atomic event.</li>
 </ul>
 
 <p><em>A Bayesian network with CPTs for each node</em>
@@ -109,22 +151,22 @@
 </ul>
 </li>
 <li>Restore polytree property by modifying tree somehow</li>
-<li><strong><em>Use a montecarlo sampling algorithm</em></strong></li>
+<li><strong><em>Use a Montecarlo sampling algorithm</em></strong></li>
 </ul>
 
 <p><strong>Rejection Sampling</strong></p>
 
 <ul>
-<li>A montecarlo method that involves producing samples and processing through a bayesian net rejecting or accepting them depending on their vale
+<li>A Montecarlo method that involves producing samples and processing through a bayesian net rejecting or accepting them depending on their vale
 
 <ul>
 <li>Start with all RV's unknown</li>
 <li>Choose a topological ordering</li>
 <li>Get random numbers to assign values</li>
-<li>Generate samples and reject anythig that's not satisfied
+<li>Generate samples and reject anything that's not satisfied
 
 <ul>
-<li>Calculate probablities by counting</li>
+<li>Calculate probabilities by counting</li>
 </ul>
 </li>
 </ul>
@@ -134,7 +176,7 @@
 <p><strong>Likelihood weighting</strong></p>
 
 <ul>
-<li>Fix evidence variables, sample only nonevidence variables and wieght each sample by the likelihood it adhears to evidence
+<li>Fix evidence variables, sample only non-evidence variables and weight each sample by the likelihood it adheres to evidence
 
 <ul>
 <li>Assign a topological ordering</li>
@@ -149,7 +191,7 @@
 <ul>
 <li><strong><em>One version of a markov chain monte carlo algorithm</em></strong></li>
 <li>Fix evidence variables to their values</li>
-<li>Initalize all other values randomly</li>
+<li>Initialize all other values randomly</li>
 <li>Iterate over all nodes many times</li>
 <li>During each iteration resample the non-evidence variables using only the markov blaket for conditioning
 
@@ -157,14 +199,14 @@
 <li>Markov Blanket: Variable is conditionally independent of all other nodes given its parents, children and siblings</li>
 </ul>
 </li>
-<li>Each iteration should adjuct the probablities slightly</li>
+<li>Each iteration should adjust the probabilities slightly</li>
 </ul>
 
 <p><em>Naive Bayes</em>
             - A supervised learning algorithm based on applying Bayes' theorem with the naive assumption of independence between every pair of features. Only the most relevant relation is considered.
-            - Ususally, root is the query and leaves are the evidence nodes
+            - Usually, root is the query and leaves are the evidence nodes
             - Symptoms (evidence nodes) are conditionally independent of each other given the disease
-            - Stringent assumptions, take the max relationship and use that as the likely relationsship
+            - Stringent assumptions, take the max relationship and use that as the likely relationship
             - lets you infer the most likely disease easily</p>
 
 <h1>
@@ -190,8 +232,8 @@
 
 <ul>
 <li>Measure current entropy</li>
-<li>Measure entropy after eaech possible split</li>
-<li>Split on attribute that yeilds the lowest entropy</li>
+<li>Measure entropy after each possible split</li>
+<li>Split on attribute that yields the lowest entropy</li>
 <li><strong><em>Minimize Entropy, Maximize information gain</em></strong></li>
 </ul>
 </li>
@@ -215,9 +257,9 @@
 <p><img src="https://upload.wikimedia.org/wikipedia/en/4/4f/GEP_decision_tree_with_numeric_and_nominal_attributes.png" alt="alt text" title="Tree displaying if we go golfing today"></p>
 
 <h2>
-<a id="entropy-pruing-overfitting-and-bias-variance-tradeoff" class="anchor" href="#entropy-pruing-overfitting-and-bias-variance-tradeoff" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Entropy, Pruing, Overfitting, and Bias Variance Tradeoff</h2>
+<a id="entropy-pruning-overfitting-and-bias-variance-tradeoff" class="anchor" href="#entropy-pruning-overfitting-and-bias-variance-tradeoff" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Entropy, Pruning, Overfitting, and Bias Variance Tradeoff</h2>
 
-<p><strong>Entropy</strong> Measure of disorder, used to masure information gain from a split</p>
+<p><strong>Entropy</strong> Measure of disorder, used to measure information gain from a split</p>
 
 <ul>
 <li>H(s) = Sum(v){-P(v)log2(P(v))}</li>
@@ -301,7 +343,7 @@
 </ul>
 
 <h2>
-<a id="finite-and-infite-hypothesis-space" class="anchor" href="#finite-and-infite-hypothesis-space" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Finite and Infite Hypothesis Space</h2>
+<a id="finite-and-infinite-hypothesis-space" class="anchor" href="#finite-and-infinite-hypothesis-space" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Finite and Infinite Hypothesis Space</h2>
 
 <p><strong>Finite Hypothesis Space:</strong> A bounded number of possible inputs and outputs</p>
 
@@ -419,7 +461,7 @@
 <h2>
 <a id="syntactic-versus-semantic-convergence" class="anchor" href="#syntactic-versus-semantic-convergence" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Syntactic versus Semantic Convergence</h2>
 
-<p><strong>Syntactic Convergene</strong> When the values being considered converge. In the case of an ANN, this occurs when the weight and bias values converge</p>
+<p><strong>Syntactic Convergence</strong> When the values being considered converge. In the case of an ANN, this occurs when the weight and bias values converge</p>
 
 <p><strong>Semantic Convergence</strong> When a given ML model converges to a state such that it accurately classifies new samples</p>
 
